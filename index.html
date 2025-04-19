@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno_o</title>
+    <style>
+        body {
+            background-image: url('https://linktr.ee/static/img/linktree-bg.png'); /* Możesz zmienić ten obrazek */
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .popup {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .linktree-container {
+            /* Ukrywamy kontener Linktree, bo chcemy tylko popup na początku */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <audio autoplay loop>
+        <source src="Setka.mp3" type="audio/mpeg">
+        Twoja przeglądarka nie obsługuje odtwarzania audio.
+    </audio>
+
+    <div class="popup">
+        <h2>Ele mordo !</h2>
+        <p>Zanim pobierzesz grę zapraszam Cię na naszego discorda, dołącz do oddziału BrunoFPS 💥 tam dowiesz się wszystkiego na temat gry i nie tylko 🤣 .</p>
+        <button onclick="pokazLinktree()">Przejdź do strony</button>
+    </div>
+
+    <div id="linktree-container" class="linktree-container">
+        <iframe src="https://linktr.ee/Bruno_o" width="100%" height="600px" style="border:none;"></iframe>
+    </div>
+
+    <script>
+        function pokazLinktree() {
+            document.querySelector('.popup').style.display = 'none';
+            document.getElementById('linktree-container').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
